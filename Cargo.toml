@@ -1,17 +1,10 @@
 [package]
-name = "sigmaos-device"
+name = "sigmaos_device"
 version = "0.1.0"
 edition = "2021"
-authors = ["SigmaOS Project"]
-description = "Device and driver management"
-license = "GPL-3.0-or-later"
-repository = "https://github.com/AaryanSinghChauhan09/SigmaOS-device"
-readme = "README.md"
-keywords = ["device", "driver", "hardware"]
-categories = ["os"]
+license = "MIT"
+description = "SigmaOS device component inspired by Linux Mint / Omarchy / Arch Linux."
 
-[dependencies]
-sigmaos-kernel = { version = "0.1", path = "../SigmaOS-kernel" }
-
-[profile.release]
-opt-level = 3
+[lib]
+name = "sigmaos_device"
+path = "src/lib.rs"
