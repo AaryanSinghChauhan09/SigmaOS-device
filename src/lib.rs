@@ -7,6 +7,7 @@
 #![warn(missing_docs)]
 
 /// Errors raised by this component.
+pub mod sigmadevicemanager2;
 #[derive(Debug, thiserror::Error)]
 pub enum ComponentError {
     /// The requested operation is not supported by this component yet.
