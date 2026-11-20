@@ -2,9 +2,31 @@
 name = "sigmaos_device"
 version = "0.1.0"
 edition = "2021"
-license = "MIT"
-description = "SigmaOS device component inspired by Linux Mint / Omarchy / Arch Linux."
+rust-version = "1.75"
+authors = ["SigmaOS Contributors"]
+description = "SigmaOS component: SigmaOS-device"
+repository = "https://github.com/AaryanSinghChauhan09/SigmaOS-device"
+license = "Apache-2.0"
+keywords = ["sigmaos", "os", "systems"]
+categories = ["os"]
+publish = false
 
 [lib]
-name = "sigmaos_device"
+name = "sigmaos_device_lib"
 path = "src/lib.rs"
+crate-type = ["rlib"]
+
+[dependencies]
+thiserror = "1.0"
+log = "0.4"
+
+[dev-dependencies]
+pretty_assertions = "1.4"
+
+[features]
+default = []
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1

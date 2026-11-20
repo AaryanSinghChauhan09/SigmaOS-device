@@ -1,16 +1,16 @@
 [component]
 name = "SigmaOS-device"
 tier = 2
-stability = "beta"
+stability = "scaffold"
 language = "rust"
-description = "Device component for SigmaOS"
+description = "Device manager for SigmaOS hardware and peripheral management"
 upstream = []
 
 [contract]
 provides = ["component"]
-depends_on = ["SigmaOS-system"]
+depends_on = []
 
 [maturity]
-status = "Implemented"
+status = "Scaffold"
 test_evidence = "Compiles and passes AAA unit tests"
 next_milestone = "Hardware and runtime integration"

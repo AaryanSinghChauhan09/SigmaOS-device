@@ -1,11 +1,10 @@
-// Integration test for SigmaOS-device
-// Verifies the crate builds and links as a dependency.
-#![allow(unused_imports)]
+//! Integration tests for SigmaOS-device.
 
-use sigmaos_device as _;
+use sigmaos_device_lib::{Component, ComponentLifecycle};
 
 #[test]
-fn crate_links_and_runs() {
-    // The crate compiled and linked; exercise a no-op assertion.
-    assert_eq!(2 + 2, 4);
+fn component_initialises_and_runs() {
+    let mut c = Component::new();
+    c.init().expect("init should succeed");
+    c.run().expect("run should succeed after init");
 }
