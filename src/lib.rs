@@ -6,6 +6,9 @@
 #![forbid(unsafe_code)]
 #![warn(missing_docs)]
 
+/// Device manager module.
+pub mod sigmadevice;
+
 /// Errors raised by this component.
 pub mod sigmadevicemanager2;
 #[derive(Debug, thiserror::Error)]
